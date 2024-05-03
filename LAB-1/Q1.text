@@ -1,0 +1,36 @@
+
+
+// Psedocode for the graph search agent
+
+
+function graph_search_agent(graph, start_node, goal_node)
+ {
+ // frontier includes nodes that are avilaible for exploring
+ // priority queue based on heuristic function
+ initialize frontier = {start_node};
+ // explored includes nodes that are visited
+ initialize explored = {};
+ while (frontier is not empty)
+ {
+ node = remove_from_frontier(frontier);
+ if(node==goal_node){
+ return goal_node; //path to find the goal node
+ }
+ else
+ explored.add(node);
+for(all neighbours of node)
+ {
+ // we will check if node is already explored or not
+ if(!explored.contains(neighbour)){
+ if(!frontier.contains(neighbour)){
+ frontier.add(neighbour)
+ }
+ else
+ replace node in frontier if cost of alredy present
+ node is greater than this one
+ }
+ }
+ }
+ // if no goal find then return failure
+ return failure;
+ }
